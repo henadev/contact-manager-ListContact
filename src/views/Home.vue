@@ -1,11 +1,13 @@
 <template>
+<section class="row">
 <div class="col-6">
 <ContactList :contactsList="contactsList"  @mouse-over-contact="updateHoveredContact"
-      @mouseout="hoveredContact = null"></ContactList>
+      @mouseleave="hoveredContact = null"></ContactList>
 </div>
 <div class="col-6">
 <ContactDetails v-if="hoveredContact !== null" :contact="hoveredContact"></ContactDetails>
 </div>
+</section>
 
 
 </template>

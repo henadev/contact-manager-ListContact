@@ -1,7 +1,7 @@
 <template>
 <ul class="list-group"> 
-    <li class="list-group-item" v-for="(list,indice)  in contactsList" :key="list.id" @mouseover="updateContact(indice)">
-        {{list.name}}
+    <li class="list-group-item" v-for="contact  in contactsList" :key="contact.id" @mouseover="$emit('mouse-over-contact', contact)">
+        {{contact.name}}
     </li>
 </ul>
 </template>
